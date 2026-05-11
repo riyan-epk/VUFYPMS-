@@ -202,25 +202,20 @@ php artisan key:generate
 
 ### Step 6.4 — Configure Database Connection
 
-Open the `.env` file in Notepad:
+> ✅ **No editing needed for standard XAMPP setup!**
+> The `.env.example` file already has the correct XAMPP default settings:
+> - Database: `vufypms`
+> - Username: `root`
+> - Password: *(blank)*
+
+**Only edit `.env` if you set a custom MySQL password in XAMPP:**
 1. Open File Explorer → navigate to your project folder
-2. Find the file named `.env` (no extension shown if hidden)
-3. Right-click on `.env` → **Open with** → **Notepad**
-4. Find these lines and make sure they look exactly like this:
-
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=vufypms
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-> ✅ Leave `DB_PASSWORD=` blank (XAMPP default has no password)
-> If you set a MySQL password in XAMPP, type it after `DB_PASSWORD=`
-
-5. Press **Ctrl + S** to save → close Notepad
+2. Right-click on `.env` → **Open with** → **Notepad**
+3. Find this line and add your password after the `=`:
+   ```
+   DB_PASSWORD=your_mysql_password_here
+   ```
+4. Press **Ctrl + S** to save → close Notepad
 
 ### Step 6.5 — Create Database Tables
 
